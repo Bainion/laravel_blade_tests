@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('/animations', function () {
     return view('animations');
-});
+})->name('animations');
 
 Route::prefix("animation")->group(function () {
     Route::get('/', function () {
@@ -18,7 +18,7 @@ Route::prefix("animation")->group(function () {
     });
     Route::get('/create', function () {
         return view('create');
-    });
+    })->middleware(['auth', 'verified']);
 });
 
 Route::get('dashboard', function () {
@@ -27,11 +27,11 @@ Route::get('dashboard', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 Route::get('/creations', function () {
     return view('creations');
-});
+})->name('creations');
 
 Route::prefix("creation")->group(function () {
     Route::get('/', function () {
@@ -39,17 +39,13 @@ Route::prefix("creation")->group(function () {
     });
     Route::get('/create', function () {
         return view('create');
-    });
+    })->middleware(['auth', 'verified']);
 });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::post("/formSubmitted", function () {
-    return "Form submitted !";
 });
 
 require __DIR__ . '/auth.php';

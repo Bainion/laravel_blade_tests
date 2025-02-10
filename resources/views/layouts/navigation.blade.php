@@ -15,6 +15,15 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('animations')" :active="request()->routeIs('animations')">
+                        {{ __('Animations') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('creations')" :active="request()->routeIs('creations')">
+                        {{ __('Creations') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        {{ __('Contact') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -71,6 +80,15 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('animations')" :active="request()->routeIs('animations')">
+                {{ __('Animations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('creations')" :active="request()->routeIs('creations')">
+                {{ __('Creations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                {{ __('Contact') }}
             </x-responsive-nav-link>
         </div>
 
