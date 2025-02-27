@@ -1,14 +1,14 @@
 <div class="rounded-lg border shadow-sm overflow-hidden bg-white border-slate-200 shadow-slate-950/5 flex w-full flex-row">
     <img class="w-2/5 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="card-image" />
-    <div class="w-full h-max rounded p-4">
+    <div class="w-full h-max rounded p-8">
         <div>
             <h5 class="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-current mb-2">
-                Lyft launching cross-platform service this week
+                {{$animation["title"]}}
             </h5>
         </div>
         <div>
-            <p class="font-sans antialiased text-base mb-8 text-slate-600">
-                Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story. But wait, there is more. Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            <p class="font-sans antialiased text-base mb-8 text-slate-600 text-justify">
+                {{$animation["description"]}}
             </p>
         </div>
         <div class="flex justify-end">

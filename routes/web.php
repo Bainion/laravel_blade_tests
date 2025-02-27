@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ForgeController;
+use App\Http\Controllers\AnimationController;
 use Illuminate\Support\Facades\Route;
 
 //GET
@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/forge/{type}/{page?}', [ForgeController::class, 'show'])->name('forge.show');
+Route::get('/forge/{type}/{page?}', [AnimationController::class, 'show'])->name('forge.show');
 
 Route::get('/animations', function () {
     return view('animations');

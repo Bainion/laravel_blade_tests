@@ -13,10 +13,8 @@
                 <h1>@isset($title){{$title}}@endisset</h1>
                 <p>@isset($description){{$description}}@endisset</p>
             </div>
-            <div class="flex flex-col gap-y-4 flex-grow dark:bg-yellow-800 p-8 pr-32">
-                <x-card-animation></x-card-animation>
-                <x-card-animation></x-card-animation>
-                <x-card-animation></x-card-animation>
+            <div>
+                <x-list-animations :animations="$animations" />
             </div>
         </div>
     </div>
