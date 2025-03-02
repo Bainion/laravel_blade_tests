@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="title">Animations</x-slot>
-    <div class="w-full content-center">
-        <div class="grid grid-cols-2 grid-rows-2 gap-16 p-16 w-full w-max-3/4">
+    <div class="w-full flex justify-center">
+        <div class="grid grid-cols-2 grid-rows-2 gap-16 p-16 w-3/4">
             <a href=<?= route('forge.show', 'roman') ?>>
                 <x-card-forge>
                     <x-slot name="title">Forge Romaine</x-slot>
