@@ -15,9 +15,20 @@ class Animation //extends Model
     public string $location;
     public string $website;
 
+    public function __construct(int $id, string $title, string $description, string $startDate, string $endDate, string $location, string $website)
+    {
+        $this->id = $id;
+        $this->title = $title;
+        $this->description = $description;
+        $this->startDate = $startDate;
+        $this->endDate = $endDate;
+        $this->location = $location;
+        $this->website = $website;
+    }
+
     public static function all()
     {
-        return [
+        $array = [
             [
                 'id' => 0,
                 'title' => 'Festival des casquettes',
@@ -55,9 +66,16 @@ class Animation //extends Model
                 'website' => 'https://www.chillon.ch/',
             ],
         ];
+        
+        $animations = [];
+        foreach($array as $animation){
+            $animation = new Animation($animation['id'], $animation['title'], $animation['description'], $animation['startDate'], $animation['endDate'], $animation['location'], $animation['website']);
+            $animations[] = $animation;
+        }
+        return $animations;
     }
 
-    public static function find(int $id): array
+    public static function find(int $id)
     {
         $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
         if (!$job) {

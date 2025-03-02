@@ -3,12 +3,12 @@
     <div class="w-full h-max rounded p-8">
         <div>
             <h5 class="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-current mb-2">
-                {{$animation["title"]}}
+                {{$animation->title}}
             </h5>
         </div>
         <div>
             <p class="font-sans antialiased text-base mb-8 text-slate-600 text-justify">
-                {{$animation["description"]}}
+                {{$animation->description}}
             </p>
         </div>
         <div class="flex justify-end">

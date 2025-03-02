@@ -32,13 +32,13 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/creations', function () {
-    return view('creations');
-})->name('creations');
+Route::get('/galleries', function () {
+    return view('galleries');
+})->name('galleries');
 
-Route::prefix("creation")->group(function () {
+Route::prefix("gallery")->group(function () {
     Route::get('/', function () {
-        return view('creation');
+        return view('gallery');
     });
     Route::get('/create', function () {
         return view('create');

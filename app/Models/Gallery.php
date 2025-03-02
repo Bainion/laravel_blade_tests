@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Creation extends Model
+class Gallery extends Model
 {
     public int $id;
     public string $name;

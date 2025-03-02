@@ -12,7 +12,7 @@ class AnimationController extends Controller
         $title = 'Forge ' . $style;
         $description = 'Description de la forge';
         $animations = Animation::all();
-        return view('forge', ['title' => $title, 'description' => $description], compact('animations'));
+        return view('forge', ['title' => $title, 'description' => $description])->with('animations', $animations);
     }
     //
 }

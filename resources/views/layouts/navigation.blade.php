@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="sticky w-full top-0 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" class="sticky w-full top-0 z-index:50 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -18,8 +18,8 @@
                     <x-nav-link :href="route('animations')" :active="request()->routeIs('animations')">
                         {{ __('Animations') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('creations')" :active="request()->routeIs('creations')">
-                        {{ __('Creations') }}
+                    <x-nav-link :href="route('galleries')" :active="request()->routeIs('galleries')">
+                        {{ __('Galleries') }}
                     </x-nav-link>
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('Contact') }}
@@ -84,8 +84,8 @@
             <x-responsive-nav-link :href="route('animations')" :active="request()->routeIs('animations')">
                 {{ __('Animations') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('creations')" :active="request()->routeIs('creations')">
-                {{ __('Creations') }}
+            <x-responsive-nav-link :href="route('galleries')" :active="request()->routeIs('galleries')">
+                {{ __('Galleries') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                 {{ __('Contact') }}

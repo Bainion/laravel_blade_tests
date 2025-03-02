@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">Accueil</x-slot>
-    <div>
+    <div class="p-16">
         <h1 class="dark:text-gray-100 m-2">TEST</h1>
         <p class="text-gray-500 m-3 p-1 text-justify dark:text-gray-100 ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus egestas tortor, nec venenatis purus ultrices id. Sed sit amet velit ac tortor pellentesque tempor. Vivamus efficitur bibendum urna et sollicitudin. Nam dignissim faucibus augue eget bibendum. Nam id enim nec ligula lobortis vulputate. Aliquam erat volutpat. Vestibulum eu malesuada purus. Aliquam posuere ac quam eget iaculis.
