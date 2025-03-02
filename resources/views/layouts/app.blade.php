@@ -30,7 +30,7 @@
         @endisset
 
         <!-- Page Content -->
-        <main class="flex flex-grow">
+        <main class="flex flex-grow z-0">
             {{ $slot }}
         </main>
 

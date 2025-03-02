@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="title">Galleries</x-slot>
-    <div class=" w-full dark: bg-yellow-700 content-center">
-        <div class="grid grid-cols-3 gap-4 p-16 w-max-3/4 place-items-center">
-
-        </div>
+    <div class=" flex flex-col dark: bg-yellow-700 w-full p-16 gap-4">
+        <x-gallery></x-gallery>
+        <x-gallery></x-gallery>
+        <x-gallery></x-gallery>
     </div>
 </x-app-layout>
