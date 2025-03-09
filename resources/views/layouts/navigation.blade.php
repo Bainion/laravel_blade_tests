@@ -15,6 +15,27 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
+                    <!--
+                    <x-dropdown>
+                        <x-slot name="title">
+                            {{ __('Animations') }}
+                        </x-slot>
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('forge.show', 'roman')">
+                                {{ __('Forge Romaine') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('forge.show', 'celtic')">
+                                {{ __('Forge Celtique') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('forge.show', 'medieval')">
+                                {{ __('Forge Médievale') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('forge.show', 'modern')">
+                                {{ __('Forge Moderne') }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
+                    -->
                     <x-nav-link :href="route('animations')" :active="request()->routeIs('animations')">
                         {{ __('Animations') }}
                     </x-nav-link>
@@ -60,6 +81,7 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
+                -->
             </div>
             @endif
 
