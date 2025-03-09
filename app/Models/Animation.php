@@ -7,7 +7,10 @@ use Illuminate\Support\Arr;
 
 class Animation //extends Model
 {
-    public int $id;
+    /** @use HasFactory<\Database\Factories\AnimationFactory> */
+    //use HasFactory;
+
+    public int    $id;
     public string $title;
     public string $description;
     public string $startDate;
@@ -24,6 +27,17 @@ class Animation //extends Model
         $this->endDate = $endDate;
         $this->location = $location;
         $this->website = $website;
+    }
+
+    public static function deserialize($dataArray)
+    {
+        $animations = [];
+        foreach ($dataArray as $data) {
+            $animation = new Animation($data['id'], $data['title'], $data['description'], $data['startDate'], $data['endDate'], $data['location'], $data['website'],);
+
+            $animations[] = $animation;
+        }
+        return $animations;
     }
 
     public static function all()
@@ -66,12 +80,7 @@ class Animation //extends Model
                 'website' => 'https://www.chillon.ch/',
             ],
         ];
-        
-        $animations = [];
-        foreach($array as $animation){
-            $animation = new Animation($animation['id'], $animation['title'], $animation['description'], $animation['startDate'], $animation['endDate'], $animation['location'], $animation['website']);
-            $animations[] = $animation;
-        }
+        $animations = Animation::deserialize($array);
         return $animations;
     }
 

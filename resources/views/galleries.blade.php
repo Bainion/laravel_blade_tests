@@ -1,8 +1,17 @@
 <x-app-layout>
     <x-slot name="title">Galleries</x-slot>
-    <div class=" flex flex-col dark: bg-yellow-700 w-full p-16 gap-4">
-        <x-gallery></x-gallery>
-        <x-gallery></x-gallery>
-        <x-gallery></x-gallery>
+    <div>
+        @php
+        $number = rand(3,7);
+        @endphp
+        <x-gallery :count="$number">
+            <x-slot name="title">Animations</x-slot>
+        </x-gallery>
+        @php
+        $number = rand(3,7);
+        @endphp
+        <x-gallery :count="$number">
+            <x-slot name="title">Créations</x-slot>
+        </x-gallery>
     </div>
 </x-app-layout>
