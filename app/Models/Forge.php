@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forge extends Model
 {
+    protected $fillable = ['name', 'description'];
+
     /** @use HasFactory<\Database\Factories\ForgeFactory> */
     use HasFactory;
 

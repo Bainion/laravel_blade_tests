@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('animations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('title');
+            $table->text('description');
+            $table->date('startDate');
+            $table->date('endDate');
+            $table->string('location');
+            $table->string('website');
+            $table->foreignId(\App\Models\Forge::class)->constrained()->onDelete('cascade');
         });
     }
 

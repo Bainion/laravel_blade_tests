@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
-class Animation //extends Model
+class Animation extends Model
 {
     /** @use HasFactory<\Database\Factories\AnimationFactory> */
-    //use HasFactory;
+    use HasFactory;
 
     public int    $id;
     public string $title;
@@ -40,6 +41,7 @@ class Animation //extends Model
         return $animations;
     }
 
+    /*
     public static function all()
     {
         $array = [
@@ -83,6 +85,7 @@ class Animation //extends Model
         $animations = Animation::deserialize($array);
         return $animations;
     }
+    */
 
     public static function find(int $id)
     {
